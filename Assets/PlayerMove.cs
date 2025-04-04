@@ -24,7 +24,7 @@ public class PlayerMove : MonoBehaviour
         float moveX = Input.GetAxisRaw("Horizontal"); // Di chuyển ngang (A/D hoặc mũi tên)
         float moveY = Input.GetAxisRaw("Vertical"); // Di chuyển dọc (W/S hoặc mũi tên)
 
-        rb.velocity = new Vector2(moveX * moveSpeed, moveY * moveSpeed);
+        rb.linearVelocity = new Vector2(moveX * moveSpeed, moveY * moveSpeed);
     }
 
     void OnTriggerEnter2D(Collider2D other)
